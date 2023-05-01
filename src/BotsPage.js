@@ -30,7 +30,7 @@ function BotsPage(){
 
     return (
         <div>
-            <YourBotArmy bots={bots} handleClick={removeBot} handleDelete={deleteBot} />
+            <YourBotArmy bots={bots.filter(bot => bot.isAdded)} handleClick={removeBot} handleDelete={deleteBot} />
             <BotCollection bots={bots} handleClick={updateBot} handleDelete={deleteBot} />
         </div>
     )
