@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
+import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
+
 
 function BotsPage(){
     // Step one code
@@ -16,9 +18,9 @@ function BotsPage(){
         {setBots(bots.map(bot => id === bot.id ? {...bot, isAdded:true} : bot))
     }}
 
-    // const removeBot = (id) => {
-    //     {setBots(bots.map(bot => id === bot.id ? {...bot, isAdded:false} : bot))
-    // }}
+    const removeBot = (id) => {
+        {setBots(bots.map(bot => id === bot.id ? {...bot, isAdded:false} : bot))
+    }}
 
     const deleteBot = (id) => {
         fetch(`http://localhost:3000/bots/${id}`, {
@@ -28,6 +30,7 @@ function BotsPage(){
 
     return (
         <div>
+            <YourBotArmy bots={bots} handleClick={removeBot} handleDelete={deleteBot} />
             <BotCollection bots={bots} handleClick={updateBot} handleDelete={deleteBot} />
         </div>
     )

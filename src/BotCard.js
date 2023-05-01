@@ -13,7 +13,6 @@ function BotCard({bot, handleClick, handleDelete}) {
     return (
         <div className="ui column">
             <div className="ui card" key={bot.id} onClick={() => handleClick(bot.id)} >
-            </div>
             <div className="image">
                 <img alt="oh no!" src={bot.avatar_url} />
             </div>
@@ -51,6 +50,7 @@ function BotCard({bot, handleClick, handleDelete}) {
                             </button>
                     </div>
                 </span>
+            </div>
             </div>
         </div>
     )

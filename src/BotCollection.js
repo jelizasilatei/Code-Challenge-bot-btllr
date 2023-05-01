@@ -10,6 +10,7 @@ function BotCollection({bots, handleClick, handleDelete}) {
     return (
         <div className = "bots-available">
             <div className = "row">
+                Bot Collection
                 {displayCards}
             </div>
         </div>
