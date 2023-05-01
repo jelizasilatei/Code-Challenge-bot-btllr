@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import BotsAvailable from "./BotsAvailable";
 
 function BotsPage(){
     // Step one code
@@ -13,7 +14,7 @@ function BotsPage(){
 
     return (
         <div>
-            
+            <BotsAvailable bots={bots} />
         </div>
     )
     
