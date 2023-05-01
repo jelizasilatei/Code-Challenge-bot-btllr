@@ -9,10 +9,10 @@ const botTypeClasses  = {
     Captain: "icon star"
 };
 
-function BotCard({bot}) {
+function BotCard({bot, handleClick, handleDelete}) {
     return (
         <div className="ui column">
-            <div className="ui card" key={bot.id} >
+            <div className="ui card" key={bot.id} onClick={() => handleClick(bot.id)} >
             </div>
             <div className="image">
                 <img alt="oh no!" src={bot.avatar_url} />
@@ -42,10 +42,10 @@ function BotCard({bot}) {
                 <span>
                     <div className="segment-basic">
                         <button 
-                        className="mini-button" 
+                        className="red-button" 
                         onClick={(e) => 
                             {e.stopPropagation()
-                            // handleDelete(bot.id)
+                            handleDelete(bot.id)
                             }}>
                                 X
                             </button>
