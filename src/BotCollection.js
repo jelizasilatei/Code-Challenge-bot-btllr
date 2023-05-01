@@ -1,7 +1,7 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotsAvailable({bots}) {
+function BotCollection({bots}) {
 
     const displayCards = bots.map(bot => {
         return <BotCard key={bot.id} bot={bot} />
@@ -17,4 +17,4 @@ function BotsAvailable({bots}) {
 
 }
 
-export default BotsAvailable;
+export default BotCollection;
