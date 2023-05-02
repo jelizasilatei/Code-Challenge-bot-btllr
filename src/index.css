@@ -25,7 +25,7 @@ body {
 }
 .ui.card>.image>img, .ui.cards>.card>.image>img {
   display: block;
-  width: 30%;
+  width: 15%;
   height: auto;
   border-radius: inherit;
   background-color:rgb(90, 61, 85);

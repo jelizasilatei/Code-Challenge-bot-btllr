@@ -11,7 +11,7 @@ function YourBotArmy({bots, handleClick, handleDelete}) {
         <div className="your-bot-army">
             <div className="your-bot-army-grid">
                 <div className="your-bot-army-row">
-                    Your Bot Army
+                    <h2>Your Bot Army</h2>
                     {displayCards}
                 </div>
             </div>
